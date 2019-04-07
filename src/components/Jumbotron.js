@@ -5,12 +5,7 @@ import {Grid} from 'semantic-ui-react'
 const jumbotronBody={
     height:'70vh',
     paddingTop:'68px',
-    backgroundImage:'url(http://farmedhere.com.my/wp-content/uploads/2018/12/Banner_04.jpg)',
-}
-
-const gridBody={
-    backgroundColor:'teal',
-    height:'100%'
+    backgroundColor:'#AFEEEE'
 }
 
 
@@ -18,10 +13,19 @@ class Jumbotron extends Component {
     render() {
         return (
             <div style={jumbotronBody}>
-                <Grid>
+                <Grid columns='3' centered>
                     <Grid.Row>
-                        <Grid.Column>
-
+                        {/* Col 1 */}
+                        <Grid.Column width='2'>
+                            COl 1
+                        </Grid.Column>
+                        {/* Col 2 */}
+                        <Grid.Column width='12' textAlign='center'>
+                            <h1>This is FarmedHere</h1>
+                        </Grid.Column>
+                        {/* Col 3 */}
+                        <Grid.Column width='2'>
+                            Col 3
                         </Grid.Column>
 
                     </Grid.Row>
