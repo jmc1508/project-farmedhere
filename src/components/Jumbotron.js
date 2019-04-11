@@ -1,38 +1,59 @@
 import React, { Component } from 'react';
 import {Container,
-        Header} from 'semantic-ui-react'
+        Segment,
+        Header,
+        Responsive,
+        Button} from 'semantic-ui-react'
+
 
 // Style
-const jumbotronBody={
+const jumbotronBodyDesktop={
     height:'70vh',
     paddingTop:'68px',
     backgroundColor:'#AFEEEE',
-
+}
+const jumbotronBodyMobile={
+    height:'35vh',
+    paddingTop:'68px',
+    backgroundColor:'#AFEEEE',
 }
 
-const jumbotronContent={
-    backgroundColor:'red',
-    marginTop:'8em',
-    marginBottom:'0'
-}
-
-const headerStyle={
+const headerStyleDesktop={
     fontSize:'4em',
+    marginTop:'2em'
 }
 
+const headerStyleMobile={
+    fontSize:'2em',
+    marginTop:'1em',
+}
+// Render
 class Jumbotron extends Component {
+
+    state={
+        mobile:'',
+    }
+
+    handleOnUpdate=()=>{
+        this.setState({mobile:'true'})
+    }
     render() {
+
+        const {isMobile}= this.props
+        
+        
         return (
             <div >
-                <Container style={jumbotronBody} fluid>
-                    <Container textAlign='center' text style={jumbotronContent} >
-                        <Header style={headerStyle} as='h1'>This is FarmedHere</Header>
-                        <Header.Content>URBAN GREENHOUSE FARMING</Header.Content>
-                    </Container>
+                <Container style={isMobile? jumbotronBodyMobile:jumbotronBodyDesktop} text textAlign='center'>
+                    <Header style={isMobile? headerStyleMobile: headerStyleDesktop} as='h1'>This is FarmedHere</Header>
+                    <Header.Content>URBAN GREENHOUSE FARMING</Header.Content>
                 </Container>
             </div>
         );
     }
 }
+
+
+
 
 export default Jumbotron;
