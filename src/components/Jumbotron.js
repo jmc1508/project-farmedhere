@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
-import {Grid} from 'semantic-ui-react'
+import {Container,
+        Header} from 'semantic-ui-react'
 
 // Style
 const jumbotronBody={
     height:'70vh',
     paddingTop:'68px',
-    backgroundColor:'#AFEEEE'
+    backgroundColor:'#AFEEEE',
+
 }
 
+const jumbotronContent={
+    backgroundColor:'red',
+    marginTop:'8em',
+    marginBottom:'0'
+}
+
+const headerStyle={
+    fontSize:'4em',
+}
 
 class Jumbotron extends Component {
     render() {
         return (
-            <div style={jumbotronBody}>
-                <Grid columns='3' centered>
-                    <Grid.Row>
-                        {/* Col 1 */}
-                        <Grid.Column width='2'>
-                            COl 1
-                        </Grid.Column>
-                        {/* Col 2 */}
-                        <Grid.Column width='12' textAlign='center'>
-                            <h1>This is FarmedHere</h1>
-                        </Grid.Column>
-                        {/* Col 3 */}
-                        <Grid.Column width='2'>
-                            Col 3
-                        </Grid.Column>
-
-                    </Grid.Row>
-                </Grid>
+            <div >
+                <Container style={jumbotronBody} fluid>
+                    <Container textAlign='center' text style={jumbotronContent} >
+                        <Header style={headerStyle} as='h1'>This is FarmedHere</Header>
+                        <Header.Content>URBAN GREENHOUSE FARMING</Header.Content>
+                    </Container>
+                </Container>
             </div>
         );
     }
