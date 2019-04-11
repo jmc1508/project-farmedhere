@@ -17,7 +17,7 @@ const NavBarItems=()=>(
 
         <Menu.Item>
             <Icon name='leaf' size='small' />
-            <Link to="#">Our Products</Link>
+            <Link to="/our-products">Our Products</Link>
         </Menu.Item>
 
         <Menu.Item >
@@ -50,17 +50,17 @@ class Navibar extends Component {
 
         return (
             <div>
-                <Responsive {...Responsive.onlyMobile}>
+                <Responsive >
                     <Menu fixed='top'>
                     {/* NavBar Items - LHS */}
                         <Menu.Item>
                             <img src="http://farmedhere.com.my/wp-content/uploads/2019/01/farmedhere_logo-02.png"/>
-                            <Link to="#">Homepage</Link>
+                            <Link to="/">Homepage</Link>
                         </Menu.Item>
 
                         <Menu.Item>
                             <Icon name='info circle' size='large' />
-                            <Link to="#">About Us</Link>
+                            <Link to="/about-us">About Us</Link>
                         </Menu.Item>
                     {/* NavBar Items - RHS */}
                         <Menu.Menu position ='right'>
@@ -84,9 +84,8 @@ class Navibar extends Component {
                 </Responsive>
                 
 
-                <Responsive minWidth={Responsive.onlyMobile.maxWidth}>
+                {/* <Responsive minWidth={Responsive.onlyMobile.maxWidth}>
                     <Menu fixed='top'>
-                    {/* NavBar Items - LHS */}
                         <Menu.Item>
                             <img src="http://farmedhere.com.my/wp-content/uploads/2019/01/farmedhere_logo-02.png"/>
                             <Link to="#">Homepage</Link>
@@ -97,11 +96,10 @@ class Navibar extends Component {
                             <Link to="#">About Us</Link>
                         </Menu.Item>
                         <Menu.Menu position ='right'>
-                            {/* NavBarItems */}
                             <NavBarItems/>
                         </Menu.Menu>
                     </Menu>
-                </Responsive>
+                </Responsive> */}
             </div>
         );
     }
