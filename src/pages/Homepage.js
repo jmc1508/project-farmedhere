@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import {Segment,
+        Container,
+        Grid,
+        Divider} from 'semantic-ui-react'
 import Jumbotron from '../components/Jumbotron';
 import SellingPoint from '../components/SellingPoint'
+import Footer from '../components/Footer'
 
 class Homepage extends Component {
 
@@ -12,10 +17,10 @@ class Homepage extends Component {
             <div>
                 {/* Jumbotron */}
                 <Jumbotron isMobile={isMobile}/>
+
                 {/* SellingPoint */}
                 <SellingPoint isMobile={isMobile}/>
-                {/* Our Products */}
-
+                   
             </div>
         );
     }

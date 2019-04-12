@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import {Grid,
         Icon,
-        Header} from 'semantic-ui-react'
+        Header,
+        Container} from 'semantic-ui-react'
+import Footer from '../components/Footer'
 
 // Style
 const gridBody={
-    height:'40vh',
+    marginTop:'20px',
+    marginBottom:'20px'
 }
 
 const gridColumn={
@@ -27,8 +30,8 @@ const gridContent={
 class SellingPoint extends Component {
     render() {
         return (
-            <Grid style={gridBody} columns={3} divided stackable>
-                <Grid.Row >
+            // <Container>
+            <Grid divided stackable columns={3} style={gridBody}>
                 {/* Column 1 - Minimal Pesticides */}
                     <Grid.Column style={gridColumn} textAlign='center'>
                             <Icon name='leaf' size ='big'></Icon>
@@ -64,8 +67,10 @@ class SellingPoint extends Component {
                                 The world renowned Hokkaido and Yubari Melons from Japan have recorded the highest brix level of 18% in sweetness. The brix level of our melons is up to 16%.
                             </p>
                     </Grid.Column>
-                </Grid.Row>
             </Grid>
+
+
+            
         );
     }
 }

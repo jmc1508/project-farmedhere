@@ -5,6 +5,11 @@ import Homepage from './pages/Homepage'
 import Navibar from './components/Navibar'
 import AboutUs from './pages/AboutUs'
 import OurProducts from './pages/OurProducts'
+import Footer from './components/Footer'
+
+
+// Style
+
 
 
 
@@ -42,6 +47,9 @@ class App extends Component {
           <Route path="/about-us" component={props=> <AboutUs isMobile={isMobile} {...props}/>}/>
 
         </Switch>
+
+        <Footer/>
+
       </div>
     );
   }
