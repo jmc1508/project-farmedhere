@@ -8,11 +8,6 @@ import OurProducts from './pages/OurProducts'
 import Footer from './components/Footer'
 
 
-// Style
-
-
-
-
 class App extends Component {
 
     state ={

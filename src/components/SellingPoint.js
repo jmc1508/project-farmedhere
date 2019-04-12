@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {Grid,
         Icon,
         Header,
-        Container} from 'semantic-ui-react'
-import Footer from '../components/Footer'
+        } from 'semantic-ui-react'
 
 // Style
 const gridBody={
@@ -19,10 +18,6 @@ const gridColumn={
 
 const headerHeight={
     height:'40px'
-}
-
-const gridContent={
-    height:'20%',
 }
 
 
