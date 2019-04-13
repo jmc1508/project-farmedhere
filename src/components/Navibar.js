@@ -32,18 +32,22 @@ const NavBarItems=()=>(
     </>
 )
 
-
-
 class Navibar extends Component {
 
     state={
         visible:false,
+        showModal:false,
     }
 
+    // Navibar - show click
     handleShowClick =()=> this.setState({visible:!this.state.visible})
-    handleSidebarHide = () => this.setState({ visible: false })
-    
 
+    // Navibar - hide
+    handleSidebarHide = () => this.setState({ visible: false })
+
+
+    
+// Render
     render() {
 
         const {visible}=this.state
@@ -82,24 +86,7 @@ class Navibar extends Component {
                         </Menu.Menu>
                     </Menu>
                 </Responsive>
-                
-
-                {/* <Responsive minWidth={Responsive.onlyMobile.maxWidth}>
-                    <Menu fixed='top'>
-                        <Menu.Item>
-                            <img src="http://farmedhere.com.my/wp-content/uploads/2019/01/farmedhere_logo-02.png"/>
-                            <Link to="#">Homepage</Link>
-                        </Menu.Item>
-
-                        <Menu.Item>
-                            <Icon name='info circle' size='large' />
-                            <Link to="#">About Us</Link>
-                        </Menu.Item>
-                        <Menu.Menu position ='right'>
-                            <NavBarItems/>
-                        </Menu.Menu>
-                    </Menu>
-                </Responsive> */}
+            
             </div>
         );
     }

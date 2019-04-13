@@ -7,14 +7,14 @@ import {Container,
 
 // Style
 const jumbotronBodyDesktop={
-    height:'70vh',
+    height:'500px',
     paddingTop:'68px',
     backgroundColor:'#AFEEEE',
     backgroundImage:'url(http://farmedhere.com.my/wp-content/uploads/2018/12/Banner_04.jpg)',
-    backgroundSize:'cover'
+    backgroundSize:'cover',
 }
 const jumbotronBodyMobile={
-    height:'50vh',
+    height:'250px',
     paddingTop:'68px',
     backgroundColor:'#AFEEEE',
     backgroundImage:'url(http://farmedhere.com.my/wp-content/uploads/2018/12/Banner_04.jpg)',
@@ -45,16 +45,15 @@ class Jumbotron extends Component {
         
         return (
             <div >
-                <Segment style={isMobile? jumbotronBodyMobile:jumbotronBodyDesktop}>
-                    <Container  textAlign='center'>
-                            {/* Header */}
-                            <Header style={isMobile? headerStyleMobile: headerStyleDesktop} as='h1'>This is FarmedHere</Header>
-                            <Header.Content style={contentStyleDesktop}>URBAN GREENHOUSE FARMING</Header.Content>
-                            <br/>
-                            {/* Button */}
-                            <Button color='green'>Contact Us</Button>
-                    </Container>
-                </Segment>
+                <Container textAlign='center' fluid style={isMobile? jumbotronBodyMobile:jumbotronBodyDesktop}>
+                    
+                    {/* Header */}
+                    <Header style={isMobile? headerStyleMobile: headerStyleDesktop} as='h1'>This is FarmedHere</Header>
+                    <Header.Content style={contentStyleDesktop}>URBAN GREENHOUSE FARMING</Header.Content>
+                    <br/>
+                    {/* Button */}
+                    <Button color='green'>Contact Us</Button>
+                </Container>
             </div>
         );
     }
