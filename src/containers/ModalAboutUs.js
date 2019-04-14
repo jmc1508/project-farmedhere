@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {Modal,
-        Image,
-        Header,
         Embed} from 'semantic-ui-react'
 
 

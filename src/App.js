@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs'
 import OurProducts from './pages/OurProducts'
 import Footer from './components/Footer'
 import ShowModal from './components/ShowModal'
+import ContactUs from './pages/ContactUs'
 
 
 class App extends Component {
@@ -53,6 +54,7 @@ class App extends Component {
           <Route exact path="/" component={props=> <Homepage  isMobile={isMobile} {...props}/> } />
           <Route exact path="/our-products" component={props=> <OurProducts  isMobile={isMobile} {...props}/> } />
           <Route path="/about-us" component={props=> <AboutUs handleShowModalAboutUs={this.handleShowModalAboutUs} isMobile={isMobile} {...props}/>}/>
+          <Route path="/contact-us" component={props=> <ContactUs isMobile={isMobile} {...props}/>}/>
         </Switch>
 
         <Footer/>
